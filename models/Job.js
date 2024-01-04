@@ -1,14 +1,17 @@
-const Sequelize = require('sequelize')
-const db = require('../db/connection')
+const Sequelize = require('sequelize');
+const db = require('../db/connection');
 
 const Job = db.define('job', {
     title: {
         type: Sequelize.STRING,
     },
+    description: {
+        type: Sequelize.STRING,
+    },
     salary: {
         type: Sequelize.STRING,
     },
-    comapny: {
+    company: {
         type: Sequelize.STRING,
     },
     email: {
@@ -16,10 +19,7 @@ const Job = db.define('job', {
     },
     new_job: {
         type: Sequelize.INTEGER,
-    },
-    description:{
-        type: Sequelize.STRING
     }
-})
+});
 
 module.exports = Job
